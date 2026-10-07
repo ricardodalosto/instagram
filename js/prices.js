@@ -20,23 +20,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function updatePrice(card) {
     const box = getPriceBox(card);
-    const title = card.querySelector('h3')?.textContent.trim();
+    const title = (card.dataset.keyword || card.querySelector('h3')?.textContent || '').trim();
     if (!box || !title) return;
 
-    box.replaceChildren();
-    const loading = document.createElement('span');
-    loading.className = 'price-loading';
-    loading.title = 'Consultando preço na Shopee';
-    box.append(loading);
+    // Só exibe o placeholder de loading se o card ainda não tiver um preço renderizado
+    const hasExistingPrice = Boolean(box.querySelector('.price-current'));
+    if (!hasExistingPrice) {
+      box.replaceChildren();
+      const loading = document.createElement('span');
+      loading.className = 'price-loading';
+      loading.title = 'Consultando preço na Shopee';
+      box.append(loading);
+    }
 
     try {
       const response = await fetch(`/api/prices?keyword=${encodeURIComponent(title)}`, {
         headers: { Accept: 'application/json' }
       });
+
+      if (!response.ok) {
+        throw new Error(`Erro HTTP ${response.status}`);
+      }
+
       const result = await response.json();
 
-      if (!response.ok || !result.success || !result.data) {
-        throw new Error(result.error || `Erro HTTP ${response.status}`);
+      if (!result.success || !result.data) {
+        throw new Error(result.error || 'Resposta inválida da API');
       }
 
       const { priceMin, priceMax, discount } = result.data;
@@ -50,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
         style: 'currency',
         currency: 'BRL'
       });
+
+      // Atualiza o box mantendo a estrutura limpa
+      box.replaceChildren();
+
       const price = document.createElement('span');
       price.className = 'price-current';
       price.textContent = Number.isFinite(maximum) && maximum > current
@@ -67,12 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       loadedCards.add(card);
     } catch (error) {
-      console.error(`Não foi possível atualizar o preço de "${title}":`, error);
-      box.replaceChildren();
-      const fallback = document.createElement('span');
-      fallback.className = 'price-badge-shopee';
-      fallback.textContent = 'Confira o preço atual na Shopee';
-      box.append(fallback);
+      console.warn(`Não foi possível atualizar o preço de "${title}":`, error.message);
+      // Se já tinha um preço pré-renderizado, não remove o preço por causa de erro temporário
+      if (!box.querySelector('.price-current')) {
+        box.replaceChildren();
+        const fallback = document.createElement('span');
+        fallback.className = 'price-badge-shopee';
+        fallback.textContent = 'Confira o preço atual na Shopee';
+        box.append(fallback);
+      }
     }
   }
 
@@ -84,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
           updatePrice(entry.target);
         }
       });
-    }, { rootMargin: '200px' });
+    }, { rootMargin: '250px' });
     cards.forEach((card) => observer.observe(card));
   } else {
     cards.forEach(updatePrice);

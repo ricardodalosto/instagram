@@ -5,11 +5,55 @@ const priceCache = new Map();
 const CACHE_TTL_MS = 15 * 60 * 1000;
 const SHOPEE_API_URL = 'https://open-api.affiliate.shopee.com.br/graphql';
 
+const DEFAULT_APP_ID = '18383441255';
+const DEFAULT_SECRET = 'LESUKOG4BCPRACEAUIF6AGJCUNHQYHFD';
+
+function getCredentials() {
+  const appId = process.env.SHOPEE_APP_ID || DEFAULT_APP_ID;
+  const secret = process.env.SHOPEE_SECRET || DEFAULT_SECRET;
+  return { appId, secret };
+}
+
+function getQueryCandidates(title) {
+  const candidates = [title];
+
+  if (title.includes('Growth Supplements - 250 g')) {
+    candidates.push('Creatina Growth 250g', 'Creatina Monohidratada Growth');
+  }
+  if (title.includes('Growth Supplements - 500 g')) {
+    candidates.push('Creatina Growth 500g', 'Creatina Monohidratada Growth');
+  }
+  if (title.includes('Basic Whey 1kg Growth Supplements')) {
+    candidates.push('Basic Whey Growth', 'Basic Whey 1kg Growth');
+  }
+  if (title.includes('Whey Core 70%')) {
+    candidates.push('Whey Core 900g Soldiers Nutrition', 'Whey Core Soldiers Nutrition');
+  }
+  if (title.includes('Kit de Halteres e Anilhas de 15 kg com Kettlebell')) {
+    candidates.push('Kit Halteres Anilhas 15 kg Kettlebell', 'Kit de Halteres e Anilhas de 15 kg');
+  }
+
+  const simplified = title
+    .replace(/\(.*?\)/g, '')
+    .replace(/[|]/g, ' ')
+    .replace(/Growth Supplements/gi, 'Growth')
+    .replace(/Sem sabor em pó/gi, '')
+    .replace(/70% de Proteína Concentrada -/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (simplified && !candidates.includes(simplified)) {
+    candidates.push(simplified);
+  }
+
+  return candidates;
+}
+
 async function queryShopeeApi(keyword, appId, secret) {
   const timestamp = Math.floor(Date.now() / 1000);
   const query = `
     query GetOffers($keyword: String) {
-      productOfferV2(keyword: $keyword, page: 1, limit: 5) {
+      productOfferV2(keyword: $keyword, page: 1, limit: 3) {
         nodes {
           itemId
           productName
@@ -50,6 +94,23 @@ async function queryShopeeApi(keyword, appId, secret) {
   return result.data?.productOfferV2?.nodes || [];
 }
 
+async function queryShopeeWithCandidates(keyword, appId, secret) {
+  const candidates = getQueryCandidates(keyword);
+
+  for (const candidate of candidates) {
+    try {
+      const nodes = await queryShopeeApi(candidate, appId, secret);
+      if (nodes && nodes.length > 0) {
+        return nodes[0];
+      }
+    } catch (err) {
+      console.warn(`Falha na consulta candidata "${candidate}":`, err.message);
+    }
+  }
+
+  return null;
+}
+
 function getCachedPrice(keyword) {
   const cached = priceCache.get(keyword);
   if (!cached) return null;
@@ -72,8 +133,7 @@ async function getPricesHandler(req, res) {
     return res.status(405).json({ success: false, error: 'Método não permitido.' });
   }
 
-  const appId = process.env.SHOPEE_APP_ID;
-  const secret = process.env.SHOPEE_SECRET;
+  const { appId, secret } = getCredentials();
   if (!appId || !secret) {
     return res.status(503).json({
       success: false,
@@ -97,8 +157,7 @@ async function getPricesHandler(req, res) {
   }
 
   try {
-    const offers = await queryShopeeApi(keyword, appId, secret);
-    const offer = offers[0];
+    const offer = await queryShopeeWithCandidates(keyword, appId, secret);
     if (!offer) {
       return res.status(404).json({
         success: false,
