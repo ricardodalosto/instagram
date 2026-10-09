@@ -75,6 +75,16 @@ export default function AboutSection() {
           <p>
             E este é o meu projeto de crescimento, evolução e transformação.
           </p>
+          <div style={{ marginTop: '18px' }}>
+            <a
+              href="https://collshp.com/dalosto?view=storefront"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button button-shopee"
+            >
+              Conheça meu Catálogo Geral na Shopee <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

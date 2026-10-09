@@ -267,6 +267,102 @@
         background: linear-gradient(135deg, #ff4747 0%, #d11e1e 100%);
         box-shadow: 0 14px 30px rgba(229, 46, 46, 0.5);
       }
+      .button-shopee {
+        background: linear-gradient(135deg, #ee4d2d 0%, #ff5722 50%, #d0300d 100%) !important;
+        box-shadow: 0 10px 24px rgba(238, 77, 45, 0.4) !important;
+      }
+      .button-shopee:hover {
+        background: linear-gradient(135deg, #ff643d 0%, #ff7043 50%, #ee4d2d 100%) !important;
+        box-shadow: 0 14px 32px rgba(238, 77, 45, 0.6) !important;
+      }
+      .button-outline {
+        background: rgba(255, 255, 255, 0.06) !important;
+        border: 1px solid var(--line) !important;
+        box-shadow: none !important;
+      }
+      .button-outline:hover {
+        background: rgba(255, 255, 255, 0.12) !important;
+        border-color: rgba(255, 255, 255, 0.3) !important;
+      }
+      .nav-shopee-link {
+        background: rgba(238, 77, 45, 0.18) !important;
+        border: 1px solid rgba(238, 77, 45, 0.4) !important;
+        color: #ff7043 !important;
+      }
+      .nav-shopee-link:hover {
+        background: #ee4d2d !important;
+        color: #fff !important;
+        box-shadow: 0 4px 14px rgba(238, 77, 45, 0.4) !important;
+      }
+      .shopee-showcase-card {
+        margin-bottom: 40px;
+        padding: 32px 36px;
+        border-radius: 22px;
+        background: linear-gradient(135deg, #1d1417 0%, #291216 40%, #151820 100%);
+        border: 1px solid rgba(238, 77, 45, 0.4);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(238, 77, 45, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .shopee-showcase-content {
+        flex: 1;
+        min-width: 260px;
+      }
+      .shopee-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(238, 77, 45, 0.2);
+        border: 1px solid rgba(238, 77, 45, 0.5);
+        color: #ff7043;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .shopee-showcase-content h3 {
+        margin: 0 0 10px;
+        font-family: var(--display);
+        font-size: clamp(28px, 4vw, 36px);
+        text-transform: uppercase;
+        color: var(--white);
+        line-height: 1;
+      }
+      .shopee-showcase-content p {
+        margin: 0 0 20px;
+        color: #d1d5db;
+        font-size: 13px;
+        line-height: 1.65;
+        max-width: 620px;
+      }
+      .social-btn.shopee .social-icon-wrapper {
+        background: linear-gradient(135deg, #ee4d2d 0%, #ff5722 100%);
+        box-shadow: 0 4px 12px rgba(238, 77, 45, 0.35);
+      }
+      .shopee-bottom-banner {
+        margin-top: 24px;
+        background: linear-gradient(135deg, #1e1316 0%, #2b1115 50%, #12141a 100%);
+        border: 1px solid rgba(238, 77, 45, 0.45);
+        border-radius: 20px;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), 0 0 20px rgba(238, 77, 45, 0.15);
+      }
+      .shopee-banner-icon {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #ee4d2d 0%, #ff5722 100%);
+        color: #fff;
+        flex-shrink: 0;
+        box-shadow: 0 4px 14px rgba(238, 77, 45, 0.4);
+      }
       .button span {
         font-size: 18px;
         line-height: 1;
@@ -1249,9 +1345,9 @@
         target="_blank"
         rel="noopener noreferrer"
         class="topline-link"
-        aria-label="Visite minha loja na RD Store"
+        aria-label="Catálogo Geral de todos os produtos na Shopee"
       >
-        Visite minha loja <span aria-hidden="true">↗</span>
+        🛍️ CATÁLOGO GERAL DE TODOS OS PRODUTOS — ACESSE MINHA LOJA OFICIAL NA SHOPEE <span aria-hidden="true">↗</span>
       </a>
     </div>
     <header>
@@ -1266,9 +1362,10 @@
           <a href="#acessorios">Acessórios</a>
           <a href="#sobre">A história do Ricardo</a>
           <a href="#redes-sociais">Redes Sociais</a>
+          <a href="https://collshp.com/dalosto?view=storefront" target="_blank" rel="noopener noreferrer" class="nav-shopee-link">Loja Shopee ↗</a>
         </nav>
-        <a class="nav-cta" href="#destaques"
-          >Ver produtos <span aria-hidden="true">↗</span></a
+        <a class="nav-cta" href="https://collshp.com/dalosto?view=storefront" target="_blank" rel="noopener noreferrer"
+          >Catálogo Completo <span aria-hidden="true">↗</span></a
         >
       </div>
     </header>
@@ -1287,14 +1384,19 @@
       <section class="wrap hero" aria-labelledby="hero-title">
         <div>
           <p class="eyebrow">Seu treino, do seu jeito</p>
-          <h1 id="hero-title">Mais foco.<br />Mais <span>forca.</span></h1>
+          <h1 id="hero-title">Mais foco.<br />Mais <span>força.</span></h1>
           <p class="hero-copy">
             Equipamentos, suplementos, roupas e acessórios para montar seu
             espaço de treino e seguir firme em cada repetição.
           </p>
-          <a class="button" href="#destaques"
-            >Explore a loja <span aria-hidden="true">↓</span></a
-          >
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;">
+            <a class="button button-shopee" href="https://collshp.com/dalosto?view=storefront" target="_blank" rel="noopener noreferrer"
+              >Catálogo Geral na Shopee <span aria-hidden="true">↗</span></a
+            >
+            <a class="button button-outline" href="#destaques"
+              >Ver Categorias <span aria-hidden="true">↓</span></a
+            >
+          </div>
           <div class="hero-note">
             <i aria-hidden="true"></i> Produtos selecionados para acompanhar seu
             ritmo
@@ -1334,12 +1436,13 @@
 
       <div class="ticker" aria-label="Categorias da loja">
         <div class="wrap ticker-inner">
+          <span>🛍️ Catálogo Geral na Shopee: collshp.com/dalosto</span><b aria-hidden="true">✳</b>
           <span>Treino de verdade</span><b aria-hidden="true">✳</b>
           <span>Equipamentos</span><b aria-hidden="true">✳</b>
           <span>Suplementos</span><b aria-hidden="true">✳</b>
           <span>Roupas</span><b aria-hidden="true">✳</b>
           <span>Acessórios</span><b aria-hidden="true">✳</b>
-          <span>Constancia todo dia</span>
+          <span>Loja Oficial Ricardo Dalosto</span>
         </div>
       </div>
 
@@ -1348,6 +1451,25 @@
         id="destaques"
         aria-labelledby="products-title"
       >
+        <!-- Banner Destaque Catálogo Geral Shopee -->
+        <div class="shopee-showcase-card" aria-label="Catálogo Geral de Todos os Produtos">
+          <div class="shopee-showcase-content">
+            <div class="shopee-badge">🏬 Loja Oficial Shopee</div>
+            <h3>Catálogo Geral com Todos os Produtos</h3>
+            <p>
+              Quer explorar nossa vitrine completa com centenas de suplementos, halteres, estações de musculação, roupas fitness e acessórios de alta performance? Acesse agora nossa loja oficial na Shopee e aproveite cupons e frete grátis!
+            </p>
+            <a
+              href="https://collshp.com/dalosto?view=storefront"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-shopee"
+            >
+              Acessar Catálogo Geral na Shopee <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
         <div class="section-head">
           <div>
             <p class="eyebrow">Encontre o que combina com seu treino</p>
@@ -2658,6 +2780,16 @@
             <p>
               E este é o meu projeto de crescimento, evolução e transformação.
             </p>
+            <div style="margin-top: 18px;">
+              <a
+                href="https://collshp.com/dalosto?view=storefront"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-shopee"
+              >
+                Conheça meu Catálogo Geral na Shopee <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -2672,10 +2804,28 @@
             <p class="eyebrow">Conecte-se conosco</p>
             <h2 id="social-title">Siga a RD Store</h2>
             <p>
-              Acompanhe novidades, promoções, lançamentos de treino e tire suas dúvidas diretamente pelos nossos canais oficiais.
+              Acompanhe novidades, promoções, lançamentos de treino e acesse nosso catálogo oficial de produtos diretamente pelos nossos canais.
             </p>
           </div>
           <div class="social-grid">
+            <a
+              href="https://collshp.com/dalosto?view=storefront"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn shopee"
+              aria-label="Catálogo Geral na Loja Oficial Shopee"
+            >
+              <div class="social-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M19.5 7.5h-2.25V6.75C17.25 3.85 14.9 1.5 12 1.5S6.75 3.85 6.75 6.75v.75H4.5C3.67 7.5 3 8.17 3 9v11.25C3 21.08 3.67 21.75 4.5 21.75h15c.83 0 1.5-.67 1.5-1.5V9c0-.83-.67-1.5-1.5-1.5zM8.25 6.75c0-2.07 1.68-3.75 3.75-3.75s3.75 1.68 3.75 3.75v.75H8.25v-.75zm6.47 7.64c-.1.74-.52 1.34-1.22 1.7-.58.3-1.32.41-2.14.33-.8-.08-1.48-.38-1.95-.87-.35-.37-.58-.84-.66-1.37l1.45-.22c.07.41.22.7.46.9.3.25.75.36 1.25.33.5-.03.88-.17 1.07-.4.15-.17.2-.4.15-.65-.06-.3-.26-.54-.62-.73-.25-.13-.7-.29-1.32-.47-.85-.25-1.44-.55-1.8-.9-.45-.44-.65-1.02-.57-1.7.09-.73.5-1.32 1.18-1.68.55-.3 1.25-.4 2.03-.32.75.08 1.37.35 1.82.8.33.34.54.76.62 1.24l-1.45.2c-.05-.33-.18-.57-.39-.73-.26-.2-.66-.29-1.12-.26-.45.03-.79.16-.96.37-.13.15-.17.35-.13.57.05.28.23.5.55.67.23.12.65.27 1.23.44.88.26 1.5.57 1.88.93.47.45.69 1.05.61 1.73z"/>
+                </svg>
+              </div>
+              <div class="social-info">
+                <strong>Loja Oficial Shopee</strong>
+                <span>Catálogo Completo</span>
+              </div>
+            </a>
+
             <a
               href="https://www.instagram.com/ricardo_dalosto"
               target="_blank"
@@ -2750,6 +2900,30 @@
           </div>
         </div>
 
+        <!-- Banner Vitrine Shopee -->
+        <div class="shopee-bottom-banner" aria-label="Loja Oficial na Shopee">
+          <div class="tiktok-banner-inner">
+            <div class="shopee-banner-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M19.5 7.5h-2.25V6.75C17.25 3.85 14.9 1.5 12 1.5S6.75 3.85 6.75 6.75v.75H4.5C3.67 7.5 3 8.17 3 9v11.25C3 21.08 3.67 21.75 4.5 21.75h15c.83 0 1.5-.67 1.5-1.5V9c0-.83-.67-1.5-1.5-1.5zM8.25 6.75c0-2.07 1.68-3.75 3.75-3.75s3.75 1.68 3.75 3.75v.75H8.25v-.75zm6.47 7.64c-.1.74-.52 1.34-1.22 1.7-.58.3-1.32.41-2.14.33-.8-.08-1.48-.38-1.95-.87-.35-.37-.58-.84-.66-1.37l1.45-.22c.07.41.22.7.46.9.3.25.75.36 1.25.33.5-.03.88-.17 1.07-.4.15-.17.2-.4.15-.65-.06-.3-.26-.54-.62-.73-.25-.13-.7-.29-1.32-.47-.85-.25-1.44-.55-1.8-.9-.45-.44-.65-1.02-.57-1.7.09-.73.5-1.32 1.18-1.68.55-.3 1.25-.4 2.03-.32.75.08 1.37.35 1.82.8.33.34.54.76.62 1.24l-1.45.2c-.05-.33-.18-.57-.39-.73-.26-.2-.66-.29-1.12-.26-.45.03-.79.16-.96.37-.13.15-.17.35-.13.57.05.28.23.5.55.67.23.12.65.27 1.23.44.88.26 1.5.57 1.88.93.47.45.69 1.05.61 1.73z"/>
+              </svg>
+            </div>
+            <div class="tiktok-banner-text">
+              <h3>Catálogo Geral de Todos os Produtos</h3>
+              <p>Confira a loja completa de Ricardo com todos os produtos na Shopee!</p>
+            </div>
+            <a
+              href="https://collshp.com/dalosto?view=storefront"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-shopee"
+              style="min-height: 46px;"
+            >
+              Acessar Loja na Shopee <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
         <!-- Banner Vitrine TikTok -->
         <div class="tiktok-bottom-banner" aria-label="Loja no TikTok">
           <div class="tiktok-banner-inner">
@@ -2789,6 +2963,9 @@
           <p>Desenvolvido por Ricardo<span>Idealizador da RD Store</span></p>
         </div>
         <div class="footer-socials" aria-label="Redes sociais">
+          <a href="https://collshp.com/dalosto?view=storefront" target="_blank" rel="noopener noreferrer" aria-label="Loja Oficial Shopee" title="Loja Oficial Shopee">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 7.5h-2.25V6.75C17.25 3.85 14.9 1.5 12 1.5S6.75 3.85 6.75 6.75v.75H4.5C3.67 7.5 3 8.17 3 9v11.25C3 21.08 3.67 21.75 4.5 21.75h15c.83 0 1.5-.67 1.5-1.5V9c0-.83-.67-1.5-1.5-1.5zM8.25 6.75c0-2.07 1.68-3.75 3.75-3.75s3.75 1.68 3.75 3.75v.75H8.25v-.75zm6.47 7.64c-.1.74-.52 1.34-1.22 1.7-.58.3-1.32.41-2.14.33-.8-.08-1.48-.38-1.95-.87-.35-.37-.58-.84-.66-1.37l1.45-.22c.07.41.22.7.46.9.3.25.75.36 1.25.33.5-.03.88-.17 1.07-.4.15-.17.2-.4.15-.65-.06-.3-.26-.54-.62-.73-.25-.13-.7-.29-1.32-.47-.85-.25-1.44-.55-1.8-.9-.45-.44-.65-1.02-.57-1.7.09-.73.5-1.32 1.18-1.68.55-.3 1.25-.4 2.03-.32.75.08 1.37.35 1.82.8.33.34.54.76.62 1.24l-1.45.2c-.05-.33-.18-.57-.39-.73-.26-.2-.66-.29-1.12-.26-.45.03-.79.16-.96.37-.13.15-.17.35-.13.57.05.28.23.5.55.67.23.12.65.27 1.23.44.88.26 1.5.57 1.88.93.47.45.69 1.05.61 1.73z"/></svg>
+          </a>
           <a href="https://www.instagram.com/ricardo_dalosto" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
@@ -2803,7 +2980,7 @@
           </a>
         </div>
         <p>Os links de produtos direcionam para ofertas e buscas na Shopee.</p>
-        <p>&copy; 2026 RD Store</p>
+        <p>&copy; 2026 RD Store • <a href="https://collshp.com/dalosto?view=storefront" target="_blank" rel="noopener noreferrer" style="color: #ff7043; text-decoration: underline;">Catálogo Geral na Shopee</a></p>
       </div>
     </footer>
 

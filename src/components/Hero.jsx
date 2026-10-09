@@ -10,9 +10,19 @@ export default function Hero() {
           Equipamentos, suplementos, roupas e acessórios para montar seu
           espaço de treino e seguir firme em cada repetição.
         </p>
-        <a className="button" href="#destaques">
-          Explore a loja <span aria-hidden="true">↓</span>
-        </a>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px' }}>
+          <a
+            className="button button-shopee"
+            href="https://collshp.com/dalosto?view=storefront"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Catálogo Geral na Shopee <span aria-hidden="true">↗</span>
+          </a>
+          <a className="button button-outline" href="#destaques">
+            Ver Categorias <span aria-hidden="true">↓</span>
+          </a>
+        </div>
         <div className="hero-note">
           <i aria-hidden="true"></i> Produtos selecionados para acompanhar seu ritmo
         </div>

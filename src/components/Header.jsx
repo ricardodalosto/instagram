@@ -9,9 +9,9 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
           className="topline-link"
-          aria-label="Visite minha loja na RD Store"
+          aria-label="Catálogo Geral com todos os produtos na Shopee"
         >
-          Visite minha loja <span aria-hidden="true">↗</span>
+          🛍️ CATÁLOGO GERAL DE TODOS OS PRODUTOS — ACESSE MINHA LOJA OFICIAL NA SHOPEE <span aria-hidden="true">↗</span>
         </a>
       </div>
       <header>
@@ -26,9 +26,22 @@ export default function Header() {
             <a href="#acessorios">Acessórios</a>
             <a href="#sobre">A história do Ricardo</a>
             <a href="#redes-sociais">Redes Sociais</a>
+            <a
+              href="https://collshp.com/dalosto?view=storefront"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-shopee-link"
+            >
+              Loja Shopee ↗
+            </a>
           </nav>
-          <a className="nav-cta" href="#destaques">
-            Ver produtos <span aria-hidden="true">↗</span>
+          <a
+            className="nav-cta"
+            href="https://collshp.com/dalosto?view=storefront"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Catálogo Completo <span aria-hidden="true">↗</span>
           </a>
         </div>
       </header>

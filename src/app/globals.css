@@ -11,6 +11,8 @@
   --red-dark: #b81a1a;
   --red-light: #ff4747;
   --red-glow: rgba(229, 46, 46, 0.35);
+  --shopee-orange: #ee4d2d;
+  --shopee-glow: rgba(238, 77, 45, 0.4);
   --white: #ffffff;
   --display: "Barlow Condensed", Impact, sans-serif;
   --body: "Manrope", sans-serif;
@@ -46,15 +48,15 @@ a {
 
 /* Topline */
 .topline {
-  background: linear-gradient(90deg, #991212 0%, #e52e2e 50%, #991212 100%);
+  background: linear-gradient(90deg, #991212 0%, #ee4d2d 50%, #991212 100%);
   color: var(--white);
-  padding: 9px 16px;
+  padding: 10px 16px;
   text-align: center;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  box-shadow: 0 2px 10px rgba(229, 46, 46, 0.25);
+  box-shadow: 0 2px 12px rgba(238, 77, 45, 0.35);
 }
 
 .topline-link {
@@ -69,7 +71,7 @@ a {
 
 .topline-link:hover {
   opacity: 0.95;
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
   transform: translateY(-1px);
 }
 
@@ -142,31 +144,35 @@ header {
   color: var(--white);
 }
 
+.nav-shopee-link {
+  background: rgba(238, 77, 45, 0.18) !important;
+  border: 1px solid rgba(238, 77, 45, 0.4) !important;
+  color: #ff7043 !important;
+}
+
+.nav-shopee-link:hover {
+  background: #ee4d2d !important;
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(238, 77, 45, 0.4);
+}
+
 .nav-cta {
   padding: 12px 18px;
   border-radius: 999px;
-  background: var(--red);
+  background: linear-gradient(135deg, #ee4d2d 0%, #d0300d 100%);
   color: var(--white);
   text-decoration: none;
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  box-shadow: 0 4px 16px rgba(229, 46, 46, 0.35);
+  box-shadow: 0 4px 16px rgba(238, 77, 45, 0.35);
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   flex-shrink: 0;
 }
 
 .nav-cta:hover {
-  background: var(--red-light);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(229, 46, 46, 0.5);
-}
-
-.primary-nav a:focus-visible,
-.nav-cta:focus-visible,
-.brand:focus-visible {
-  outline: 3px solid var(--red);
-  outline-offset: 3px;
+  box-shadow: 0 6px 20px rgba(238, 77, 45, 0.55);
 }
 
 /* Developer Ribbon */
@@ -291,9 +297,25 @@ h1 span {
   box-shadow: 0 14px 30px rgba(229, 46, 46, 0.5);
 }
 
-.button span {
-  font-size: 18px;
-  line-height: 1;
+.button-shopee {
+  background: linear-gradient(135deg, #ee4d2d 0%, #ff5722 50%, #d0300d 100%) !important;
+  box-shadow: 0 10px 24px rgba(238, 77, 45, 0.4) !important;
+}
+
+.button-shopee:hover {
+  background: linear-gradient(135deg, #ff643d 0%, #ff7043 50%, #ee4d2d 100%) !important;
+  box-shadow: 0 14px 32px rgba(238, 77, 45, 0.6) !important;
+}
+
+.button-outline {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: none !important;
+}
+
+.button-outline:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .hero-note {
@@ -328,28 +350,6 @@ h1 span {
     radial-gradient(circle at 85% 20%, rgba(229, 46, 46, 0.18), transparent 16rem),
     linear-gradient(135deg, #181b22 0%, #201316 60%, #13151b 100%);
   box-shadow: 0 22px 55px rgba(0, 0, 0, 0.6);
-}
-
-.feature::before {
-  position: absolute;
-  top: -78px;
-  right: -58px;
-  width: 270px;
-  height: 270px;
-  border: 1px solid rgba(229, 46, 46, 0.2);
-  border-radius: 50%;
-  content: "";
-}
-
-.feature::after {
-  position: absolute;
-  top: -47px;
-  right: -27px;
-  width: 208px;
-  height: 208px;
-  border: 1px solid rgba(229, 46, 46, 0.15);
-  border-radius: 50%;
-  content: "";
 }
 
 .feature-copy {
@@ -458,6 +458,79 @@ h1 span {
   color: var(--red);
   font-size: 14px;
   text-shadow: 0 0 10px var(--red-glow);
+}
+
+/* Shopee Showcase Card & Banner */
+.shopee-showcase-card {
+  margin-bottom: 40px;
+  padding: 32px 36px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #1d1417 0%, #291216 40%, #151820 100%);
+  border: 1px solid rgba(238, 77, 45, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(238, 77, 45, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.shopee-showcase-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.shopee-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(238, 77, 45, 0.2);
+  border: 1px solid rgba(238, 77, 45, 0.5);
+  color: #ff7043;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.shopee-showcase-content h3 {
+  margin: 0 0 10px;
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 36px);
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+}
+
+.shopee-showcase-content p {
+  margin: 0 0 20px;
+  color: #d1d5db;
+  font-size: 13px;
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+.shopee-bottom-banner {
+  margin-top: 24px;
+  background: linear-gradient(135deg, #1e1316 0%, #2b1115 50%, #12141a 100%);
+  border: 1px solid rgba(238, 77, 45, 0.45);
+  border-radius: 20px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), 0 0 20px rgba(238, 77, 45, 0.15);
+}
+
+.shopee-banner-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ee4d2d 0%, #ff5722 100%);
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(238, 77, 45, 0.4);
 }
 
 /* Search and Controls Bar */
@@ -619,15 +692,6 @@ h2.section-title {
   border-bottom: 1px solid var(--line);
 }
 
-.product-art::before {
-  position: absolute;
-  width: 170px;
-  height: 170px;
-  border: 1px solid rgba(229, 46, 46, 0.12);
-  border-radius: 50%;
-  content: "";
-}
-
 .product-art img {
   z-index: 1;
   width: 100%;
@@ -706,12 +770,6 @@ h2.section-title {
   font-weight: 800;
   color: var(--white);
   letter-spacing: -0.3px;
-}
-
-.price-original {
-  font-size: 11px;
-  color: var(--muted);
-  text-decoration: line-through;
 }
 
 .price-discount-badge {
@@ -953,6 +1011,11 @@ h2.section-title {
   transform: scale(1.08);
 }
 
+.social-btn.shopee .social-icon-wrapper {
+  background: linear-gradient(135deg, #ee4d2d 0%, #ff5722 100%);
+  box-shadow: 0 4px 12px rgba(238, 77, 45, 0.35);
+}
+
 .social-btn.instagram .social-icon-wrapper {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
@@ -995,7 +1058,7 @@ h2.section-title {
 
 /* TikTok Showcase Banner */
 .tiktok-bottom-banner {
-  margin-top: 36px;
+  margin-top: 24px;
   background: linear-gradient(135deg, #161922 0%, #221217 50%, #101218 100%);
   border: 1px solid rgba(229, 46, 46, 0.35);
   border-radius: 20px;

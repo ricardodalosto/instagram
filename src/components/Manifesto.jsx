@@ -6,6 +6,16 @@ export default function Manifesto() {
         <h2>
           Treinar é um hábito.<br />A evolução vem da <span>disciplina.</span>
         </h2>
+        <div style={{ marginTop: '20px' }}>
+          <a
+            href="https://collshp.com/dalosto?view=storefront"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button-shopee"
+          >
+            Acessar Catálogo Geral na Shopee <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
       <p className="manifesto-copy">
         Acreditamos que todo grande resultado começa com o primeiro passo. Nossa

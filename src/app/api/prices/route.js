@@ -17,10 +17,10 @@ export async function GET(request) {
   const priceData = await fetchShopeePrice(keyword);
 
   if (!priceData) {
-    return NextResponse.json({
-      success: false,
-      error: 'Preço indisponível no momento ou produto não encontrado.'
-    }, { status: 404 });
+    return NextResponse.json(
+      { success: false, error: 'Preço indisponível no momento ou produto não encontrado.' },
+      { status: 404 }
+    );
   }
 
   return NextResponse.json({

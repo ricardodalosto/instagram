@@ -14,11 +14,11 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: 'RD Store | Treino começa aqui',
-  description: 'Equipamentos, suplementos, roupas e acessórios para levar seu treino mais longe. Ofertas selecionadas com preços atualizados da Shopee.',
+  title: 'RD Store | Treino começa aqui - Catálogo Oficial Shopee',
+  description: 'Equipamentos, suplementos, roupas e acessórios para levar seu treino mais longe. Catálogo Geral com preços atualizados da Shopee.',
   keywords: ['shopee', 'treino', 'musculação', 'suplementos', 'creatina', 'whey', 'academia', 'rd store'],
   openGraph: {
-    title: 'RD Store | Treino começa aqui',
+    title: 'RD Store | Treino começa aqui - Catálogo Geral Shopee',
     description: 'Equipamentos, suplementos, roupas e acessórios para levar seu treino mais longe.',
     locale: 'pt_BR',
     type: 'website'

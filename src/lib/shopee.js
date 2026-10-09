@@ -54,17 +54,13 @@ export async function fetchShopeePrice(keyword) {
         Authorization: `SHA256 Credential=${appId}, Timestamp=${timestamp}, Signature=${signature}`
       },
       body: payload,
-      next: { revalidate: 900 } // Next.js fetch cache 15 min
+      next: { revalidate: 900 }
     });
 
-    if (!res.ok) {
-      return null;
-    }
+    if (!res.ok) return null;
 
     const json = await res.json();
-    if (json.errors && json.errors.length) {
-      return null;
-    }
+    if (json.errors && json.errors.length) return null;
 
     const offers = json.data?.productOfferV2?.nodes || [];
     const offer = offers[0];

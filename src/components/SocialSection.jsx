@@ -10,11 +10,29 @@ export default function SocialSection() {
           <p className="eyebrow">Conecte-se conosco</p>
           <h2 id="social-title">Siga a RD Store</h2>
           <p>
-            Acompanhe novidades, promoções, lançamentos de treino e tire suas
-            dúvidas diretamente pelos nossos canais oficiais.
+            Acompanhe novidades, promoções, lançamentos de treino e acesse nosso
+            catálogo oficial de produtos diretamente pelos nossos canais.
           </p>
         </div>
         <div className="social-grid">
+          <a
+            href="https://collshp.com/dalosto?view=storefront"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-btn shopee"
+            aria-label="Catálogo Geral na Loja Oficial Shopee"
+          >
+            <div className="social-icon-wrapper">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M19.5 7.5h-2.25V6.75C17.25 3.85 14.9 1.5 12 1.5S6.75 3.85 6.75 6.75v.75H4.5C3.67 7.5 3 8.17 3 9v11.25C3 21.08 3.67 21.75 4.5 21.75h15c.83 0 1.5-.67 1.5-1.5V9c0-.83-.67-1.5-1.5-1.5zM8.25 6.75c0-2.07 1.68-3.75 3.75-3.75s3.75 1.68 3.75 3.75v.75H8.25v-.75zm6.47 7.64c-.1.74-.52 1.34-1.22 1.7-.58.3-1.32.41-2.14.33-.8-.08-1.48-.38-1.95-.87-.35-.37-.58-.84-.66-1.37l1.45-.22c.07.41.22.7.46.9.3.25.75.36 1.25.33.5-.03.88-.17 1.07-.4.15-.17.2-.4.15-.65-.06-.3-.26-.54-.62-.73-.25-.13-.7-.29-1.32-.47-.85-.25-1.44-.55-1.8-.9-.45-.44-.65-1.02-.57-1.7.09-.73.5-1.32 1.18-1.68.55-.3 1.25-.4 2.03-.32.75.08 1.37.35 1.82.8.33.34.54.76.62 1.24l-1.45.2c-.05-.33-.18-.57-.39-.73-.26-.2-.66-.29-1.12-.26-.45.03-.79.16-.96.37-.13.15-.17.35-.13.57.05.28.23.5.55.67.23.12.65.27 1.23.44.88.26 1.5.57 1.88.93.47.45.69 1.05.61 1.73z"/>
+              </svg>
+            </div>
+            <div className="social-info">
+              <strong>Loja Oficial Shopee</strong>
+              <span>Catálogo Completo</span>
+            </div>
+          </a>
+
           <a
             href="https://www.instagram.com/ricardo_dalosto"
             target="_blank"
@@ -85,6 +103,30 @@ export default function SocialSection() {
               <strong>WhatsApp</strong>
               <span>(61) 99292-4410</span>
             </div>
+          </a>
+        </div>
+      </div>
+
+      {/* Banner Vitrine Shopee */}
+      <div className="shopee-bottom-banner" aria-label="Loja Oficial na Shopee">
+        <div className="tiktok-banner-inner">
+          <div className="shopee-banner-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M19.5 7.5h-2.25V6.75C17.25 3.85 14.9 1.5 12 1.5S6.75 3.85 6.75 6.75v.75H4.5C3.67 7.5 3 8.17 3 9v11.25C3 21.08 3.67 21.75 4.5 21.75h15c.83 0 1.5-.67 1.5-1.5V9c0-.83-.67-1.5-1.5-1.5zM8.25 6.75c0-2.07 1.68-3.75 3.75-3.75s3.75 1.68 3.75 3.75v.75H8.25v-.75zm6.47 7.64c-.1.74-.52 1.34-1.22 1.7-.58.3-1.32.41-2.14.33-.8-.08-1.48-.38-1.95-.87-.35-.37-.58-.84-.66-1.37l1.45-.22c.07.41.22.7.46.9.3.25.75.36 1.25.33.5-.03.88-.17 1.07-.4.15-.17.2-.4.15-.65-.06-.3-.26-.54-.62-.73-.25-.13-.7-.29-1.32-.47-.85-.25-1.44-.55-1.8-.9-.45-.44-.65-1.02-.57-1.7.09-.73.5-1.32 1.18-1.68.55-.3 1.25-.4 2.03-.32.75.08 1.37.35 1.82.8.33.34.54.76.62 1.24l-1.45.2c-.05-.33-.18-.57-.39-.73-.26-.2-.66-.29-1.12-.26-.45.03-.79.16-.96.37-.13.15-.17.35-.13.57.05.28.23.5.55.67.23.12.65.27 1.23.44.88.26 1.5.57 1.88.93.47.45.69 1.05.61 1.73z"/>
+            </svg>
+          </div>
+          <div className="tiktok-banner-text">
+            <h3>Catálogo Geral de Todos os Produtos</h3>
+            <p>Confira a loja completa de Ricardo com todos os produtos na Shopee!</p>
+          </div>
+          <a
+            href="https://collshp.com/dalosto?view=storefront"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button-shopee"
+            style={{ minHeight: '46px' }}
+          >
+            Acessar Loja na Shopee <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>

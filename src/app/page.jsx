@@ -5,7 +5,6 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Ticker from '@/components/Ticker';
 import CategorySection from '@/components/CategorySection';
-import ProductCard from '@/components/ProductCard';
 import Manifesto from '@/components/Manifesto';
 import AboutSection from '@/components/AboutSection';
 import SocialSection from '@/components/SocialSection';
@@ -44,10 +43,6 @@ export default function Home() {
       .filter(Boolean);
   }, [searchTerm, activeCategory]);
 
-  const totalProducts = useMemo(() => {
-    return filteredCatalog.reduce((acc, sec) => acc + sec.products.length, 0);
-  }, [filteredCatalog]);
-
   return (
     <>
       <Header />
@@ -56,6 +51,27 @@ export default function Home() {
         <Ticker />
 
         <section className="wrap section" id="destaques" aria-labelledby="products-title">
+          {/* Banner Destaque Catálogo Geral Shopee */}
+          <div className="shopee-showcase-card" aria-label="Catálogo Geral de Todos os Produtos">
+            <div className="shopee-showcase-content">
+              <div className="shopee-badge">🏬 Loja Oficial Shopee</div>
+              <h3>Catálogo Geral com Todos os Produtos</h3>
+              <p>
+                Quer explorar nossa vitrine completa com centenas de suplementos, halteres,
+                estações de musculação, roupas fitness e acessórios de alta performance?
+                Acesse agora nossa loja oficial na Shopee e aproveite cupons e frete grátis!
+              </p>
+              <a
+                href="https://collshp.com/dalosto?view=storefront"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button-shopee"
+              >
+                Acessar Catálogo Geral na Shopee <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
           <div className="section-head">
             <div>
               <p className="eyebrow">Encontre o que combina com seu treino</p>

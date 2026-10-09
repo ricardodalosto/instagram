@@ -85,11 +85,7 @@ export default function ProductCard({ product }) {
       <div className="product-info">
         <p className="product-type">{product.category}</p>
         <h3>
-          <a
-            href={product.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={product.link} target="_blank" rel="noopener noreferrer">
             {product.title}
           </a>
         </h3>
