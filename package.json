@@ -4,13 +4,18 @@
   "description": "RD Sport Store - Catálogo com Preços em Tempo Real da Shopee",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "node-fetch": "^2.7.0"
+    "lucide-react": "^1.53.0",
+    "next": "^16.4.0",
+    "node-fetch": "^2.7.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   }
 }

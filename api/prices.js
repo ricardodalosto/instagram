@@ -62,6 +62,27 @@ function getCachedPrice(keyword) {
 
 async function getPricesHandler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
+  res.setHeader('Vary', 'Origin');
+
+  const origin = req.headers.origin;
+  const allowedOrigins = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    process.env.RENDER_EXTERNAL_URL,
+    ...(process.env.SITE_ORIGIN || '')
+      .split(',')
+      .map((allowedOrigin) => allowedOrigin.trim())
+      .filter(Boolean)
+  ];
+
+  if (origin && !allowedOrigins.includes(origin)) {
+    return res.status(403).json({ success: false, error: 'Origem não autorizada.' });
+  }
+  if (origin) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  }
 
   if (req.method === 'OPTIONS') {
     return res.status(204).end();

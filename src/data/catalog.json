@@ -1,0 +1,318 @@
+[
+  {
+    "id": "equipamentos",
+    "title": "Equipamentos",
+    "eyebrow": "Estrutura para sua evolução",
+    "products": [
+      {
+        "id": "equipamentos-1",
+        "title": "Estação de Musculação 65kg Gallant Elite X (GEM65H27A-PT)",
+        "category": "Equipamentos",
+        "link": "https://s.shopee.com.br/80D9vco8Zn",
+        "image": "/images/estacao-gallant.jpg",
+        "alt": "Estacao de musculacao preta Gallant Elite X"
+      },
+      {
+        "id": "equipamentos-2",
+        "title": "Estação de Musculação Multifuncional",
+        "category": "Equipamentos",
+        "link": "https://s.shopee.com.br/3B7uB5fukH",
+        "image": "/images/estacao-multifuncional.jpg",
+        "alt": "Estacao multifuncional de musculacao preta com detalhes vermelhos"
+      },
+      {
+        "id": "equipamentos-3",
+        "title": "Bicicleta Bike Ergometrica Spinning Academia Fitness Profissional 120kg",
+        "category": "Equipamentos",
+        "link": "https://s.shopee.com.br/9V1xj97MzZ",
+        "image": "/images/bicicleta-spinning.jpg",
+        "alt": "Bicicleta ergometrica de spinning preta com detalhes vermelhos"
+      },
+      {
+        "id": "equipamentos-4",
+        "title": "Esteira Elétrica 127/220V Dobrável Silenciosa para Casa",
+        "category": "Equipamentos",
+        "link": "https://s.shopee.com.br/50ZYNBU1bd",
+        "image": "/images/esteira-eletrica.jpg",
+        "alt": "Esteira eletrica dobravel para caminhada e corrida em casa"
+      },
+      {
+        "id": "equipamentos-5",
+        "title": "Bicicleta Bike Aro 29 Ksw Xlt100 21 Velocidades Marcha Aero Alumínio Freio a disco Suspensão Mtb",
+        "category": "Equipamentos",
+        "link": "https://s.shopee.com.br/2BFOywNO7B",
+        "image": "/images/bicicleta-ksw-aro-29.webp",
+        "alt": "Bicicleta Bike Aro 29 Ksw Xlt100 21 Velocidades Marcha Aero Alumínio Freio a disco Suspensão Mtb"
+      },
+      {
+        "id": "equipamentos-6",
+        "title": "Bicicleta Aro 29 GT Sprint MX7 24V index Freio Disco Alumínio Suspensão Aero MTB",
+        "category": "Equipamentos",
+        "link": "https://s.shopee.com.br/AAHgVkuZcp",
+        "image": "/images/bicicleta-gt-sprint-mx7.webp",
+        "alt": "Bicicleta Aro 29 GT Sprint MX7 24V index Freio Disco Alumínio Suspensão Aero MTB"
+      },
+      {
+        "id": "equipamentos-7",
+        "title": "Bicicleta Elétrica Dobrável NUDA | Ideal para o Dia a Dia, Compras e Passeios",
+        "category": "Equipamentos",
+        "link": "https://s.shopee.com.br/1BMrnQnuj3",
+        "image": "/images/bicicleta-eletrica-nuda.webp",
+        "alt": "Bicicleta Elétrica Dobrável NUDA | Ideal para o Dia a Dia, Compras e Passeios"
+      },
+      {
+        "id": "equipamentos-8",
+        "title": "Bicicleta Ergométrica Magnética Horizontal Gallant Elite X",
+        "category": "Equipamentos",
+        "link": "https://s.shopee.com.br/5VVqxjtaxg",
+        "image": "/images/bicicleta-ergometrica-gallant.webp",
+        "alt": "Bicicleta Ergométrica Magnética Horizontal Gallant Elite X"
+      },
+      {
+        "id": "equipamentos-9",
+        "title": "Elíptico Bike Ergométrica 2 em 1 Residencial",
+        "category": "Equipamentos",
+        "link": "https://s.shopee.com.br/qjzQ9U8KS",
+        "image": "/images/eliptico-bike.jpg",
+        "alt": "Eliptico bike ergometrica 2 em 1 para uso residencial"
+      }
+    ]
+  },
+  {
+    "id": "suplementos",
+    "title": "Suplementos",
+    "eyebrow": "Energia para acompanhar sua rotina",
+    "products": [
+      {
+        "id": "suplementos-1",
+        "title": "Creatina Monohidratada - Growth Supplements - 250 g Sem sabor em pó",
+        "category": "Suplementos",
+        "link": "https://s.shopee.com.br/8fSsakQVhJ",
+        "image": "/images/creatina-growth-250g.webp",
+        "alt": "Creatina Monohidratada - Growth Supplements - 250 g Sem sabor em pó"
+      },
+      {
+        "id": "suplementos-2",
+        "title": "Creatina Monohidratada - Growth Supplements - 500 g Sem sabor em pó",
+        "category": "Suplementos",
+        "link": "https://s.shopee.com.br/7faLPFDAm8",
+        "image": "/images/creatina-growth-500g.webp",
+        "alt": "Creatina Monohidratada - Growth Supplements - 500 g Sem sabor em pó"
+      },
+      {
+        "id": "suplementos-3",
+        "title": "Creatina Max Titanium 300g Pura",
+        "category": "Suplementos",
+        "link": "https://s.shopee.com.br/7faLQ59hHs",
+        "image": "/images/creatina-max-titanium-300g.webp",
+        "alt": "Creatina Max Titanium 300g Pura"
+      },
+      {
+        "id": "suplementos-4",
+        "title": "Basic Whey 1kg Growth Supplements 1 kg",
+        "category": "Suplementos",
+        "link": "https://s.shopee.com.br/40h32n6jJE",
+        "image": "/images/basic-whey-growth-1kg.webp",
+        "alt": "Basic Whey 1kg Growth Supplements 1 kg"
+      },
+      {
+        "id": "suplementos-5",
+        "title": "Whey Blend Protein Concentrado e Isolado 900g Soldiers Nutrition",
+        "category": "Suplementos",
+        "link": "https://s.shopee.com.br/2LYp3tmUl1",
+        "image": "/images/whey-blend-soldiers-900g.webp",
+        "alt": "Whey Blend Protein Concentrado e Isolado 900g Soldiers Nutrition"
+      },
+      {
+        "id": "suplementos-6",
+        "title": "KIT Whey Protein Fusion + Creatina + Pré Treino + Shaker - ESPARTANOS",
+        "category": "Suplementos",
+        "link": "https://s.shopee.com.br/5VVqpqxbfh",
+        "image": "/images/kit-whey-espartanos.webp",
+        "alt": "KIT Whey Protein Fusion + Creatina + Pré Treino + Shaker - ESPARTANOS"
+      },
+      {
+        "id": "suplementos-7",
+        "title": "Whey Core 70% de Proteína Concentrada - 900g - Soldiers Nutrition",
+        "category": "Suplementos",
+        "link": "https://s.shopee.com.br/5VVqpzGRUM",
+        "image": "/images/whey-core-70-soldiers-900g.webp",
+        "alt": "Whey Core 70% de Proteína Concentrada - 900g - Soldiers Nutrition"
+      },
+      {
+        "id": "suplementos-8",
+        "title": "Kit Coqueteleira 600ml + Whey 1,2 Kg + Creatina 300g - Integral Médica",
+        "category": "Suplementos",
+        "link": "https://s.shopee.com.br/6q1EQhVEVu",
+        "image": "/images/kit-whey-creatina-integral-medica.webp",
+        "alt": "Kit Coqueteleira 600ml + Whey 1,2 Kg + Creatina 300g - Integral Médica"
+      }
+    ]
+  },
+  {
+    "id": "roupas",
+    "title": "Roupas",
+    "eyebrow": "Conforto em cada movimento",
+    "products": [
+      {
+        "id": "roupas-1",
+        "title": "Froog Bermuda Short Masculino Esportivo c/Elastano 3 Bolsos Zíper Dry Fit Leve Respirável",
+        "category": "Roupas Masculinas",
+        "link": "https://s.shopee.com.br/6AlXhqycj7",
+        "image": "/images/froog-bermuda-masculina.webp",
+        "alt": "Froog Bermuda Short Masculino Esportivo c/Elastano 3 Bolsos Zíper Dry Fit Leve Respirável"
+      },
+      {
+        "id": "roupas-2",
+        "title": "Kit 3 Shorts 2 em 1 Dryfit Masculino Academia Corrida Treino Bermuda",
+        "category": "Roupas Masculinas",
+        "link": "https://s.shopee.com.br/qk1MA32PS",
+        "image": "/images/kit-3-shorts-2em1-dryfit.webp",
+        "alt": "Kit 3 Shorts 2 em 1 Dryfit Masculino Academia Corrida Treino Bermuda"
+      },
+      {
+        "id": "roupas-3",
+        "title": "Kit 3 4 ou 6 Bermuda Short Masculino Dry Fit Academia",
+        "category": "Roupas Masculinas",
+        "link": "https://s.shopee.com.br/4qGA7dSuXf",
+        "image": "/images/kit-bermuda-dry-fit-masculino.webp",
+        "alt": "Kit 3 4 ou 6 Bermuda Short Masculino Dry Fit Academia"
+      },
+      {
+        "id": "roupas-4",
+        "title": "Kit 3 Camisas Dry Fit Masculino Academia Tecido Leve Musculação",
+        "category": "Roupas Masculinas",
+        "link": "https://s.shopee.com.br/9AP9HkvJVy",
+        "image": "/images/kit-3-camisas-dry-fit.webp",
+        "alt": "Kit 3 Camisas Dry Fit Masculino Academia Tecido Leve Musculação"
+      },
+      {
+        "id": "roupas-5",
+        "title": "Kit 5 Camisetas DryFitnes Masculina Casual Treino Academia Esportes",
+        "category": "Roupas Masculinas",
+        "link": "https://s.shopee.com.br/6L4xufGGVp",
+        "image": "/images/kit-5-camisetas-dryfit.webp",
+        "alt": "Kit 5 Camisetas DryFitnes Masculina Casual Treino Academia Esportes"
+      },
+      {
+        "id": "roupas-6",
+        "title": "4 Camisetas Masculinas Malha Fria Kit Dry Fit Camisa Treino Academia",
+        "category": "Roupas Masculinas",
+        "link": "https://s.shopee.com.br/AUuWsQOaDx",
+        "image": "/images/kit-4-camisetas-malha-fria.webp",
+        "alt": "4 Camisetas Masculinas Malha Fria Kit Dry Fit Camisa Treino Academia"
+      },
+      {
+        "id": "roupas-7",
+        "title": "Kit 2 Blusa Blogueira Feminina Transparente Tule Manga Curta Camiseta Academia Fitness Musculação",
+        "category": "Roupas Femininas",
+        "link": "https://s.shopee.com.br/8Kq2IXd085",
+        "image": "/images/kit-2-blusa-blogueira-tule.webp",
+        "alt": "Kit 2 Blusa Blogueira Feminina Transparente Tule Manga Curta Camiseta Academia Fitness Musculação"
+      },
+      {
+        "id": "roupas-8",
+        "title": "Kit 3 Unidade Baby Tee Feminina Blusa Slim Fit Baby Look Manga Curta",
+        "category": "Roupas Femininas",
+        "link": "https://s.shopee.com.br/60S7WPD7EH",
+        "image": "/images/kit-3-baby-tee-feminina.webp",
+        "alt": "Kit 3 Unidade Baby Tee Feminina Blusa Slim Fit Baby Look Manga Curta"
+      },
+      {
+        "id": "roupas-9",
+        "title": "Baby Look Dry Fit 2 Unidades Pack Promoção Academia Treino Tecido Fitness",
+        "category": "Roupas Femininas",
+        "link": "https://s.shopee.com.br/1AuNUB89z",
+        "image": "/images/baby-look-dry-fit-2un.webp",
+        "alt": "Baby Look Dry Fit 2 Unidades Pack Promoção Academia Treino Tecido Fitness"
+      },
+      {
+        "id": "roupas-10",
+        "title": "Kit 4 Camisetas Oversized Masculina 100% Algodão Casual Dia a Dia Treino Academia Slim Gola Redonda",
+        "category": "Roupas Masculinas",
+        "link": "https://s.shopee.com.br/9fLPtOxA5t",
+        "image": "/images/kit-4-camisetas-oversized.webp",
+        "alt": "Kit 4 Camisetas Oversized Masculina 100% Algodão Casual Dia a Dia Treino Academia Slim Gola Redonda"
+      },
+      {
+        "id": "roupas-11",
+        "title": "Macacão Feminino Fitness Esportivo Canelado Poliamida Academia",
+        "category": "Roupas Femininas",
+        "link": "https://s.shopee.com.br/8fSqllVkca",
+        "image": "/images/macacao-fitness.jpg",
+        "alt": "Macacão feminino fitness preto, com modelagem esportiva"
+      },
+      {
+        "id": "roupas-12",
+        "title": "Conjunto Legging Academia Fitness Feminino Cintura Alta Treino",
+        "category": "Roupas Femininas",
+        "link": "https://s.shopee.com.br/4VdHoL1t2s",
+        "image": "/images/conjunto-fitness.jpg",
+        "alt": "Conjunto feminino fitness preto com top e legging cintura alta"
+      }
+    ]
+  },
+  {
+    "id": "acessorios",
+    "title": "Acessórios",
+    "eyebrow": "Pequenos detalhes, mais foco",
+    "products": [
+      {
+        "id": "acessorios-1",
+        "title": "Kit 20 Itens Treino em Casa: Elásticos Extensor + Mini Band + Thera Band + Corda De Pular + Guia de Exercícios Exclusivo",
+        "category": "Acessórios de treino",
+        "link": "https://s.shopee.com.br/7faLWQMbWv",
+        "image": "/images/kit-20-itens-treino.webp",
+        "alt": "Kit 20 Itens Treino em Casa: Elásticos Extensor + Mini Band + Thera Band + Corda De Pular + Guia de Exercícios Exclusivo"
+      },
+      {
+        "id": "acessorios-2",
+        "title": "Kit 11 Extensor Elástico Treino Em Casa + Kit 5 Mini Band Fitness Para Exercício Yoga Treino",
+        "category": "Acessórios de treino",
+        "link": "https://s.shopee.com.br/7KxV7xkdS1",
+        "image": "/images/kit-11-extensor-5-miniband.webp",
+        "alt": "Kit 11 Extensor Elástico Treino Em Casa + Kit 5 Mini Band Fitness Para Exercício Yoga Treino"
+      },
+      {
+        "id": "acessorios-3",
+        "title": "Caneleira Tornozeleira de Peso UNIDADE de 500G 1KG 2KG 3KG 4KG 5KG Preta Rosa",
+        "category": "Acessórios de treino",
+        "link": "https://s.shopee.com.br/9fLPuN8Bvj",
+        "image": "/images/caneleira-tornozeleira-peso.webp",
+        "alt": "Caneleira Tornozeleira de Peso UNIDADE de 500G 1KG 2KG 3KG 4KG 5KG Preta Rosa"
+      },
+      {
+        "id": "acessorios-4",
+        "title": "Aderência de mão Hand grip 5-60KG Exercite a força do antebraço e dos dedos",
+        "category": "Acessórios de treino",
+        "link": "https://s.shopee.com.br/2BFOyj26TZ",
+        "image": "/images/hand-grip-5-60kg.webp",
+        "alt": "Aderência de mão Hand grip 5-60KG Exercite a força do antebraço e dos dedos"
+      },
+      {
+        "id": "acessorios-5",
+        "title": "Kit de Halteres Treino 20 Kg Bonafit 3 em 1 Musculação Ajustável Segurança e Durabilidade + Ebook",
+        "category": "Acessórios de treino",
+        "link": "https://s.shopee.com.br/AKb6hpD3nW",
+        "image": "/images/kit-halteres-20kg-bonafit.webp",
+        "alt": "Kit de Halteres Treino 20 Kg Bonafit 3 em 1 Musculação Ajustável Segurança e Durabilidade + Ebook"
+      },
+      {
+        "id": "acessorios-6",
+        "title": "Kit Halteres Ajustáveis 6 em 1",
+        "category": "Acessórios de treino",
+        "link": "https://s.shopee.com.br/AAHeia71Yq",
+        "image": "/images/acessorios.jpg",
+        "alt": "Kit de halteres ajustáveis 6 em 1 com anilhas e diferentes configurações de peso"
+      },
+      {
+        "id": "acessorios-7",
+        "title": "Kit de Halteres e Anilhas de 15 kg com Kettlebell 6 em 1 e Barras de Musculação",
+        "category": "Acessórios de treino",
+        "link": "https://s.shopee.com.br/8AWaL0uDAo",
+        "image": "/images/acessorios-15kg.jpg",
+        "alt": "Kit de halteres e anilhas de 15 kg com kettlebell e barras de musculação"
+      }
+    ]
+  }
+]

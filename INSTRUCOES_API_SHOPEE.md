@@ -21,6 +21,7 @@ Na pasta do projeto, crie `.env` a partir de `.env.example` e preencha:
 ```env
 SHOPEE_APP_ID=seu_app_id
 SHOPEE_SECRET=seu_app_secret
+SITE_ORIGIN=http://localhost:3000
 PORT=3000
 ```
 
@@ -32,19 +33,36 @@ chaves como variáveis de ambiente privadas no painel do servidor.
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
-Abra <http://localhost:3000>. O site estático sozinho não consegue assinar as
-requisições da Shopee com segurança; o servidor Node.js precisa estar ativo.
+Abra <http://localhost:3000>.
 
-## 4. Publique
+## 4. Como publicar na Vercel (Recomendado) ou no Render
 
-Publique o servidor Node.js e o site em uma hospedagem que execute `server.js`
-(ou adapte a função `api/prices.js` ao formato de funções serverless suportado
-pelo provedor). Configure `SHOPEE_APP_ID` e `SHOPEE_SECRET` como variáveis
-privadas nessa hospedagem. O endpoint `/api/prices` deve ficar no mesmo domínio
-do site, ou o frontend precisará ser configurado com a URL pública do endpoint.
+### Opção A: Vercel (1 Clique - Gratuito e Ultrarrápido)
+1. Envie o projeto para o seu GitHub.
+2. Acesse <https://vercel.com> e conecte sua conta do GitHub.
+3. Clique em **Add New > Project** e selecione o repositório.
+4. Na seção **Environment Variables**, adicione:
+   - `SHOPEE_APP_ID` = seu App ID da Shopee
+   - `SHOPEE_SECRET` = seu App Secret da Shopee
+5. Clique em **Deploy**. Pronto! Seu site estará no ar com domínio SSL grátis e preços em tempo real integrados.
+
+### Opção B: Render
+1. Conecte o repositório no <https://render.com>.
+2. Crie um **Web Service** usando o comando de build `npm run build` e start `npm start`.
+3. Adicione `SHOPEE_APP_ID` e `SHOPEE_SECRET` nas Environment Variables.
+
+O plano gratuito pode suspender o serviço após inatividade, tornando o primeiro
+acesso mais lento. A Shopee também pode impor limites ou atrasos nas consultas.
+Confira nome e preço da oferta retornada: uma busca pelo nome pode encontrar
+produtos parecidos, não necessariamente o mesmo anúncio do link afiliado.
+
+Se o repositório ainda não foi enviado ao GitHub, uma forma visual de fazer isso
+é instalar o GitHub Desktop, escolher **File > Add local repository**, selecionar
+a pasta do projeto e usar **Publish repository**. Revise os arquivos antes de
+publicar e confirme que `.env` não está entre eles.
 
 ## Observação sobre correspondência dos produtos
 

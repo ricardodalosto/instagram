@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = Array.from(document.querySelectorAll('.product'));
   const loadedCards = new Set();
   const refreshIntervalMs = 15 * 60 * 1000;
+  const apiBase = document.querySelector('meta[name="rd-store-api"]')
+    ?.content.trim().replace(/\/+$/, '') || '';
 
   function getPriceBox(card) {
     const info = card.querySelector('.product-info');
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     box.append(loading);
 
     try {
-      const response = await fetch(`/api/prices?keyword=${encodeURIComponent(title)}`, {
+      const response = await fetch(`${apiBase}/api/prices?keyword=${encodeURIComponent(title)}`, {
         headers: { Accept: 'application/json' }
       });
       const result = await response.json();
