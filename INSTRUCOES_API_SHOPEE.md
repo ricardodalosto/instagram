@@ -40,14 +40,28 @@ Abra <http://localhost:3000>.
 
 ## 4. Como publicar na Vercel (Recomendado) ou no Render
 
-### Opção A: Vercel (1 Clique - Gratuito e Ultrarrápido)
-1. Envie o projeto para o seu GitHub.
-2. Acesse <https://vercel.com> e conecte sua conta do GitHub.
-3. Clique em **Add New > Project** e selecione o repositório.
-4. Na seção **Environment Variables**, adicione:
-   - `SHOPEE_APP_ID` = seu App ID da Shopee
-   - `SHOPEE_SECRET` = seu App Secret da Shopee
-5. Clique em **Deploy**. Pronto! Seu site estará no ar com domínio SSL grátis e preços em tempo real integrados.
+### Opção A: Vercel
+
+O projeto usa Next.js. A página é publicada como site Next.js e a consulta de
+preços é atendida pela rota serverless `src/app/api/prices/route.js`; não é
+necessário executar `server.js` na Vercel nem converter o projeto para outra
+linguagem.
+
+1. Envie o projeto para um repositório GitHub, GitLab ou Bitbucket.
+2. Acesse <https://vercel.com>, importe esse repositório e mantenha o framework
+   **Next.js** detectado automaticamente. Não defina um comando de build
+   personalizado; a Vercel usa `next build`.
+3. Em **Settings > Environment Variables**, cadastre `SHOPEE_APP_ID` e
+   `SHOPEE_SECRET` como variáveis privadas. Selecione os ambientes em que serão
+   usadas (Production e, se necessário, Preview/Development).
+4. Faça o deploy. Se adicionar ou alterar as variáveis depois, gere um novo
+   deploy para que elas sejam aplicadas.
+
+Não cadastre as credenciais com prefixo `NEXT_PUBLIC_`: o App Secret deve ficar
+somente no servidor. A rota da API e o site usam o mesmo domínio, então
+`SITE_ORIGIN` não é necessário na Vercel. A consulta busca ofertas da API de
+Afiliados da Shopee; a atualização pode ter atraso e depende de credenciais
+válidas, permissões e limites da Shopee, não sendo garantida instantaneamente.
 
 ### Opção B: Render
 1. Conecte o repositório no <https://render.com>.
