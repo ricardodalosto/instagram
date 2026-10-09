@@ -1,0 +1,14 @@
+{
+  "buildCommand": "next build",
+  "installCommand": "npm install",
+  "env": {
+    "SHOPEE_APP_ID": "@shopee_app_id",
+    "SHOPEE_SECRET": "@shopee_secret"
+  },
+  "functions": {
+    "src/app/api/prices/route.js": {
+      "maxDuration": 30,
+      "memory": 512
+    }
+  }
+}
